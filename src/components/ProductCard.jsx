@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { IoIosAdd, IoIosRemove } from "react-icons/io";
 const ProductCard = ({ img, price, stock, title }) => {
@@ -24,6 +24,18 @@ const ProductCard = ({ img, price, stock, title }) => {
       setQuantity(quantity - 1);
     }
   };
+
+  // useEffect(()=>{
+  //   alert("COMPONENT DIDMOUND")
+  // },[])
+  // useEffect(()=>{
+  //   alert("COMPONENT DISUPDATE")
+  // },[quantity])
+  // useEffect(() => {
+  //   return () => {
+  //     alert("COMPONENT UNMOUNT");
+  //   };
+  // }, []);
 
   return (
     <div className="p-4 border rounded-md md:max-w-96 flex flex-col gap-4 bg-neutral-300">
@@ -68,7 +80,7 @@ const ProductCard = ({ img, price, stock, title }) => {
           onClick={() => addToCart(quantity)}
           className="bg-primary w-full"
         >
-         {stock == 0 ? "Out of stock" : "Add to cart"}
+          {stock == 0 ? "Out of stock" : "Add to cart"}
         </Button>
       </div>
     </div>

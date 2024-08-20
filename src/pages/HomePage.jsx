@@ -1,30 +1,25 @@
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
 import ProductCard from "@/components/ProductCard";
-import React from "react";
+import { axiosIstance } from "@/lib/axios";
+import { useEffect, useState } from "react";
 
-const productsRaw = [
-
-  {
-    title: "Iphone 15 Promax",
-    price: 27000000,
-    stock: 8,
-    img: "https://cdnpro.eraspace.com/media/catalog/product/a/p/apple_iphone_15_pro_max_natural_titanium_1_1_2.jpg",
-  },
-  {
-    title: "Iphone 11",
-    price: 7000000,
-    stock: 0,
-    img: "https://cdnpro.eraspace.com/media/catalog/product/a/p/apple_iphone_11_white_new_1_1_1.jpg",
-  },
-  {
-    title: "Iphone 14 Promax",
-    price: 20000000,
-    stock: 8,
-    img: "https://cdnpro.eraspace.com/media/catalog/product/i/p/iphone_14_pro_deep_purple_3.jpg",
-  },
-];
 const HomePage = () => {
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState([]);
+  const fetchProducts = async () => {
+    setLoading(true);
+    try {
+      const response = await axiosIstance.get("/products");
+      setData(response.data);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  // FETCH PRDUCTS DATA ONE, WHEN HOME PAGE MOUNT
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
   return (
     <>
@@ -38,11 +33,15 @@ const HomePage = () => {
             reprehenderit sequi, voluptatibus, laborum beatae at incidunt
           </p>
         </div>
-        <div className="flex flex-wrap gap-8">
-          {productsRaw.map((item) => {
-            return <ProductCard key={item.title} {...item} />;
-          })}
-        </div>
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          <div className="flex flex-wrap gap-8">
+            {data.map((item) => {
+              return <ProductCard key={item.title} {...item} />;
+            })}
+          </div>
+        )}
       </main>
     </>
   );
