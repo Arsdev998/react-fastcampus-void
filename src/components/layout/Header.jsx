@@ -29,7 +29,9 @@ const Header = () => {
         </div>
         <Separator orientation="vertical" className="h-full" />
         <div className="flex space-x-2">
+        <Link to={'/login'}>
           <Button>Log In</Button>
+        </Link>
           <Button variant="outline">Sign Up</Button>
         </div>
       </div>
