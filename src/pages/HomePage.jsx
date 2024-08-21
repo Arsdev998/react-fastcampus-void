@@ -1,12 +1,12 @@
 import ProductCard from "@/components/ProductCard";
+import { Skeleton } from "@/components/ui/skeleton";
 import { axiosIstance } from "@/lib/axios";
 import { useEffect, useState } from "react";
 
 const HomePage = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const fetchProducts = async () => {
-    setLoading(true);
     try {
       const response = await axiosIstance.get("/products");
       setData(response.data);
@@ -34,7 +34,12 @@ const HomePage = () => {
           </p>
         </div>
         {loading ? (
-          <p>Loading...</p>
+          <div className="grid grid-cols-2 gap-8">
+            <Skeleton className="w-[333px] h-[517px] bg-neutral-400" />
+            <Skeleton className="w-[333px] h-[517px] bg-neutral-400" />
+            <Skeleton className="w-[333px] h-[517px] bg-neutral-400" />
+            <Skeleton className="w-[333px] h-[517px] bg-neutral-400" />
+          </div>
         ) : (
           <div className="flex flex-wrap gap-8">
             {data.map((item) => {

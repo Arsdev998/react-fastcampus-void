@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { IoIosAdd, IoIosRemove } from "react-icons/io";
-const ProductCard = ({ img, price, stock, title }) => {
+import { Link } from "react-router-dom";
+const ProductCard = ({ img, price, stock, title,id }) => {
   const [quantity, setQuantity] = useState(0);
 
   const addToCart = (qty) => {
@@ -39,16 +40,18 @@ const ProductCard = ({ img, price, stock, title }) => {
 
   return (
     <div className="p-4 border rounded-md md:max-w-96 flex flex-col gap-4 bg-neutral-300">
-      <div className="aspect-square w-full overflow-hidden">
-        <img className="w-[300px]" src={img} alt="product" />
-      </div>
-      <div className="">
-        <p className="text-md">{title}</p>
-        <p className="text-xl font-semibold">
-          Rp {price.toLocaleString("id-ID")}
-        </p>
-        <p className="text-muted-foreground text-sm">In stock : {stock}</p>
-      </div>
+      <Link to={`/product/${id}`}>
+        <div className="aspect-square w-full overflow-hidden">
+          <img className="w-[300px]" src={img} alt="product" />
+        </div>
+        <div className="">
+          <p className="text-md">{title}</p>
+          <p className="text-xl font-semibold">
+            Rp {price.toLocaleString("id-ID")}
+          </p>
+          <p className="text-muted-foreground text-sm">In stock : {stock}</p>
+        </div>
+      </Link>
       <div className="flex flex-col gap-2">
         <div className="flex justify-between items-center mb-2">
           <Button
