@@ -32,13 +32,13 @@ const ProductDetailPage = () => {
         {loading ? (
           <Skeleton className="h-[582px] w-full bg-gray-200" />
         ) : (
-          <img src={product.img} alt={product.title} className="w-full" />
+          <img src={product.img} alt={product?.title} className="w-full" />
         )}
         <div className="flex flex-col gap-1 justify-center">
           {loading ? (
             <Skeleton className="w-[200px] h-[32px] bg-gray-200" />
           ) : (
-            <h1 className="text-xl">{product.title}</h1>
+            <h1 className="text-xl">{product?.title}</h1>
           )}
           {loading ? (
             <Skeleton className="w-[200px] h-[32px] bg-gray-200" />
@@ -47,35 +47,7 @@ const ProductDetailPage = () => {
               Rp {product.price?.toLocaleString("id-ID")}
             </h3>
           )}
-          <div className="">
-            {loading ? (
-              <Skeleton className="w-[400px] h-[50px] bg-gray-200 mt-4"/>
-            ) : (
-              <p className="text-sm text-muted-foreground mt-4">
-                {product.description}
-              </p>
-            )}
-            <p className="text-sm text-muted-foreground mt-4">
-              <span className="font-bold">STORAGE:</span>{" "}
-              {product.specifications?.storage}
-            </p>
-            <p className="text-sm text-muted-foreground mt-4">
-              <span className="font-bold">CAMERA:</span>{" "}
-              {product.specifications?.camera}
-            </p>
-            <p className="text-sm text-muted-foreground mt-4">
-              <span className="font-bold">PROCESSOR:</span>{" "}
-              {product.specifications?.processor}
-            </p>
-            <p className="text-sm text-muted-foreground mt-4">
-              <span className="font-bold">DISPLAY:</span>{" "}
-              {product.specifications?.display}
-            </p>
-            <p className="text-sm text-muted-foreground mt-4">
-              <span className="font-bold">BATTERY:</span>{" "}
-              {product.specifications?.battery}
-            </p>
-          </div>
+          <p className="text-sm text-muted-foreground mt-4">{product?.description}</p>
           <div className="flex items-center gap-8 mt-6">
             <Button
               size="icon"

@@ -16,10 +16,10 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { axiosIstance } from "@/lib/axios";
-import { ChevronLeft, ChevronRight, Ellipsis } from "lucide-react";
+import { ChevronLeft, ChevronRight, Edit, Ellipsis } from "lucide-react";
 import { useEffect, useState } from "react";
 import { IoAdd } from "react-icons/io5";
-import { useParams, useSearchParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 
 const ProductManagementPage = () => {
   const [productsData, setProductsData] = useState([]);
@@ -55,10 +55,10 @@ const ProductManagementPage = () => {
   };
 
   const searhProduct = () => {
-    if(productName){
+    if (productName) {
       searchParam.set("search", productName);
       setSearchparams(searchParam);
-    }else{
+    } else {
       searchParam.delete("search");
     }
   };
@@ -66,7 +66,7 @@ const ProductManagementPage = () => {
     if (searchParam.get("page")) {
       fetchProduct();
     }
-  }, [searchParam.get("page"), searchParam.get("search")],);
+  }, [searchParam.get("page"), searchParam.get("search")]);
 
   useEffect(() => {
     if (!searchParam.get("page")) {
@@ -81,10 +81,12 @@ const ProductManagementPage = () => {
         title="Products Management"
         description="Managing our product"
         rightButton={
-          <Button>
-            <IoAdd className="h-6 w-6 mr-2" />
-            Add Product
-          </Button>
+          <Link to="/admin/products/create">
+            <Button>
+              <IoAdd className="h-6 w-6 mr-2" />
+              Add Product
+            </Button>
+          </Link>
         }
       >
         <div className="">
@@ -120,9 +122,11 @@ const ProductManagementPage = () => {
                   </TableCell>
                   <TableCell>{product.stock}</TableCell>
                   <TableCell>
-                    <Button variant="ghost" size="icon">
-                      <Ellipsis className="w-6 h-6" />
-                    </Button>
+                    <Link to={"/admin/products/edit/" + product.id}>
+                      <Button variant="ghost" size="icon">
+                        <Edit className="h-6 w-6" />
+                      </Button>
+                    </Link>
                   </TableCell>
                 </TableRow>
               );

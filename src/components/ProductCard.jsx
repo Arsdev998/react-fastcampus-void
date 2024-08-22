@@ -39,13 +39,13 @@ const ProductCard = ({ img, price, stock, title,id }) => {
   // }, []);
 
   return (
-    <div className="p-4 border rounded-md md:max-w-96 flex flex-col gap-4 bg-neutral-300">
+    <div className="p-4 border rounded-md md:max-w-80 flex flex-col gap-4 bg-neutral-300">
       <Link to={`/product/${id}`}>
         <div className="aspect-square w-full overflow-hidden">
           <img className="w-[300px]" src={img} alt="product" />
         </div>
         <div className="">
-          <p className="text-md">{title}</p>
+          <p className="text-md truncate">{title}</p>
           <p className="text-xl font-semibold">
             Rp {price.toLocaleString("id-ID")}
           </p>

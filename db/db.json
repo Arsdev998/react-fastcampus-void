@@ -1,244 +1,175 @@
 {
   "products": [
     {
-      "id": 1,
-      "title": "Iphone 15 Promax",
+      "id": "wdj1",
+      "title": "Iphone 15 Promax New",
       "price": 27000000,
       "stock": 8,
       "img": "https://cdnpro.eraspace.com/media/catalog/product/a/p/apple_iphone_15_pro_max_natural_titanium_1_1_2.jpg",
       "description": "iPhone 15 Pro Max with A16 Bionic chip, 6.7-inch Super Retina XDR display, and advanced camera system.",
-      "specifications": {
-        "display": "6.7-inch OLED",
-        "processor": "A16 Bionic",
-        "storage": "128GB/256GB/512GB/1TB",
-        "camera": "48MP main, 12MP ultra-wide, 12MP telephoto",
-        "battery": "4352mAh"
-      },
       "category": "Smartphone"
     },
     {
-      "id": 2,
-      "title": "Iphone 11",
+      "id": "12hj",
+      "title": "Iphone 11 Pro",
       "price": 7000000,
-      "stock": 0,
+      "stock": 56,
       "img": "https://cdnpro.eraspace.com/media/catalog/product/a/p/apple_iphone_11_white_new_1_1_1.jpg",
       "description": "iPhone 11 with A13 Bionic chip, dual-camera system, and 6.1-inch Liquid Retina display.",
-      "specifications": {
-        "display": "6.1-inch Liquid Retina HD",
-        "processor": "A13 Bionic",
-        "storage": "64GB/128GB/256GB",
-        "camera": "12MP dual-camera system",
-        "battery": "3110mAh"
-      },
       "category": "Smartphone"
     },
     {
-      "id": 3,
+      "id": "wej1",
       "title": "Iphone 14 Promax",
       "price": 20000000,
       "stock": 8,
       "img": "https://cdnpro.eraspace.com/media/catalog/product/i/p/iphone_14_pro_deep_purple_3.jpg",
       "description": "iPhone 14 Pro Max with A15 Bionic chip, ProMotion technology, and enhanced camera system.",
-      "specifications": {
-        "display": "6.7-inch Super Retina XDR with ProMotion",
-        "processor": "A15 Bionic",
-        "storage": "128GB/256GB/512GB/1TB",
-        "camera": "12MP main, 12MP ultra-wide, 12MP telephoto",
-        "battery": "4352mAh"
-      },
       "category": "Smartphone"
     },
     {
-      "id": 4,
+      "id": "23hj",
       "title": "APPLE MACBOOK AIR",
       "price": 18000000,
       "stock": 8,
       "img": "https://cdnpro.eraspace.com/media/catalog/product/m/a/macbook_air_m2_space_gray_1.jpg",
       "description": "Apple MacBook Air with M2 chip, 13.3-inch Retina display, and up to 18 hours of battery life.",
-      "specifications": {
-        "display": "13.3-inch Retina",
-        "processor": "Apple M2",
-        "storage": "256GB/512GB/1TB/2TB SSD",
-        "memory": "8GB/16GB/24GB RAM",
-        "battery": "Up to 18 hours"
-      },
       "category": "Laptop"
     },
     {
-      "id": 5,
+      "id": "23nd",
       "title": "Samsung Galaxy S23",
       "price": 12000000,
       "stock": 15,
-      "img": "https://cdnpro.eraspace.com/media/catalog/product/s/a/samsung_galaxy_s23_ultra_green_1.jpg",
+      "img": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//106/MTA-92774248/samsung_samsung_galaxy_s23_ultra_5g_12-512gb_sm-s918b_garansi_resmi_samsung_indonesia_full07_mh6cly0h.jpg",
       "description": "Samsung Galaxy S23 Ultra with Snapdragon 8 Gen 1, 108MP camera, and 6.8-inch Dynamic AMOLED display.",
-      "specifications": {
-        "display": "6.8-inch Dynamic AMOLED 2X",
-        "processor": "Snapdragon 8 Gen 1",
-        "storage": "256GB/512GB/1TB",
-        "camera": "108MP main, 12MP ultra-wide, 10MP telephoto",
-        "battery": "5000mAh"
-      },
       "category": "Smartphone"
     },
     {
-      "id": 6,
+      "id": "23hd",
       "title": "Dell XPS 13",
       "price": 22000000,
       "stock": 5,
       "img": "https://cdnpro.eraspace.com/media/catalog/product/x/p/xps13_9310_left_1.jpg",
       "description": "Dell XPS 13 with Intel Core i7, 13.4-inch UHD+ touchscreen, and up to 16GB RAM.",
-      "specifications": {
-        "display": "13.4-inch UHD+ Touchscreen",
-        "processor": "Intel Core i7-1185G7",
-        "storage": "512GB/1TB SSD",
-        "memory": "16GB RAM",
-        "battery": "Up to 12 hours"
-      },
       "category": "Laptop"
     },
     {
-      "id": 7,
+      "id": "23hj",
       "title": "Sony WH-1000XM4",
       "price": 4000000,
       "stock": 25,
       "img": "https://cdnpro.eraspace.com/media/catalog/product/s/o/sony_wh_1000xm4_silver_1.jpg",
       "description": "Sony WH-1000XM4 Wireless Noise-Canceling Over-Ear Headphones with 30 hours battery life.",
-      "specifications": {
-        "type": "Over-Ear",
-        "connectivity": "Bluetooth 5.0",
-        "battery": "Up to 30 hours",
-        "noise_cancellation": "Active Noise Cancelling",
-        "weight": "254g"
-      },
       "category": "Headphones"
     },
     {
-      "id": 8,
+      "id": "23bd",
       "title": "Google Pixel 7 Pro",
       "price": 14000000,
       "stock": 12,
       "img": "https://cdnpro.eraspace.com/media/catalog/product/g/o/google_pixel_7_pro_obsidian_black_1.jpg",
       "description": "Google Pixel 7 Pro with Google Tensor chip, 6.7-inch QHD+ OLED display, and triple-camera system.",
-      "specifications": {
-        "display": "6.7-inch QHD+ OLED",
-        "processor": "Google Tensor",
-        "storage": "128GB/256GB/512GB",
-        "camera": "50MP main, 12MP ultra-wide, 48MP telephoto",
-        "battery": "5000mAh"
-      },
       "category": "Smartphone"
     },
     {
-      "id": 9,
+      "id": "k231",
       "title": "Asus ROG Phone 6",
       "price": 17000000,
       "stock": 10,
       "img": "https://cdnpro.eraspace.com/media/catalog/product/a/s/asus_rog_phone_6_512gb_phantom_black_1.jpg",
       "description": "Asus ROG Phone 6 with Snapdragon 8+ Gen 1, 6.78-inch AMOLED display, and 6000mAh battery.",
-      "specifications": {
-        "display": "6.78-inch AMOLED",
-        "processor": "Snapdragon 8+ Gen 1",
-        "storage": "512GB",
-        "memory": "12GB/16GB RAM",
-        "battery": "6000mAh"
-      },
       "category": "Smartphone"
     },
     {
-      "id": 10,
+      "id": "23jh",
       "title": "Microsoft Surface Pro 9",
       "price": 25000000,
       "stock": 7,
       "img": "https://cdnpro.eraspace.com/media/catalog/product/m/i/microsoft_surface_pro_9_5g_graphite_1.jpg",
       "description": "Microsoft Surface Pro 9 with Intel Core i7, 13-inch PixelSense display, and LTE connectivity.",
-      "specifications": {
-        "display": "13-inch PixelSense",
-        "processor": "Intel Core i7-1265U",
-        "storage": "256GB/512GB/1TB SSD",
-        "memory": "8GB/16GB/32GB RAM",
-        "battery": "Up to 15 hours"
-      },
       "category": "Laptop"
     },
     {
-      "id": 11,
+      "id": "23hjd",
       "title": "Apple Watch Series 8",
       "price": 8000000,
       "stock": 20,
       "img": "https://cdnpro.eraspace.com/media/catalog/product/a/p/apple_watch_series_8_starlight_1.jpg",
       "description": "Apple Watch Series 8 with ECG, Blood Oxygen sensor, and always-on Retina display.",
-      "specifications": {
-        "display": "Always-On Retina",
-        "processor": "S8 chip",
-        "connectivity": "GPS + Cellular",
-        "battery": "Up to 18 hours",
-        "water_resistance": "50m"
-      },
       "category": "Smartwatch"
     },
     {
-      "id": 12,
+      "id": "weou2",
       "title": "PlayStation 5",
       "price": 9000000,
       "stock": 30,
       "img": "https://cdnpro.eraspace.com/media/catalog/product/p/s/ps5_disc_1.jpg",
       "description": "PlayStation 5 with ultra-high-speed SSD, 4K gaming, and immersive haptic feedback.",
-      "specifications": {
-        "storage": "825GB SSD",
-        "resolution": "Up to 4K",
-        "processor": "Custom AMD Zen 2",
-        "connectivity": "Wi-Fi 6, Bluetooth 5.1",
-        "weight": "4.5kg"
-      },
       "category": "Gaming Console"
     },
     {
-      "id": 13,
+      "id": "23bs",
       "title": "Nintendo Switch",
       "price": 4500000,
       "stock": 18,
       "img": "https://cdnpro.eraspace.com/media/catalog/product/n/i/nintendo_switch_oled_white_1.jpg",
       "description": "Nintendo Switch with 7-inch OLED display, versatile gaming modes, and long battery life.",
-      "specifications": {
-        "display": "7-inch OLED",
-        "storage": "64GB internal, expandable",
-        "battery": "Up to 9 hours",
-        "connectivity": "Wi-Fi, Bluetooth 4.1",
-        "weight": "420g"
-      },
       "category": "Gaming Console"
     },
     {
-      "id": 14,
+      "id": "sd98",
       "title": "Apple iPad Pro 11",
       "price": 16000000,
       "stock": 8,
       "img": "https://cdnpro.eraspace.com/media/catalog/product/a/p/apple_ipad_pro_11_1tb_wi-fi_space_gray_1.jpg",
       "description": "Apple iPad Pro 11 with M2 chip, Liquid Retina display, and support for Apple Pencil (2nd generation).",
-      "specifications": {
-        "display": "11-inch Liquid Retina",
-        "processor": "Apple M2",
-        "storage": "128GB/256GB/512GB/1TB",
-        "battery": "Up to 10 hours",
-        "connectivity": "Wi-Fi 6E, Bluetooth 5.3"
-      },
       "category": "Tablet"
     },
     {
-      "id": 15,
+      "id": "18dj",
       "title": "Bose QuietComfort 45",
       "price": 3800000,
       "stock": 20,
       "img": "https://cdnpro.eraspace.com/media/catalog/product/b/o/bose_qc45_black_1.jpg",
       "description": "Bose QuietComfort 45 Wireless Noise Cancelling Headphones with 24 hours of battery life.",
-      "specifications": {
-        "type": "Over-Ear",
-        "connectivity": "Bluetooth 5.1",
-        "battery": "Up to 24 hours",
-        "noise_cancellation": "Active Noise Cancelling",
-        "weight": "240g"
-      },
       "category": "Headphones"
+    },
+    {
+      "id": "1f97",
+      "title": "Iphone X",
+      "price": 7000000,
+      "description": "Iphone X mantap",
+      "stock": 57,
+      "img": "data:image/jpeg;base64,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",
+      "category": "SmartPhone"
+    },
+    {
+      "id": "4cdf",
+      "title": "ROG ZPYRUS ",
+      "price": 35000000,
+      "stock": 5,
+      "description": "laptop oe",
+      "img": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2024/4/5/6aab44c4-438a-4eb3-8d9c-54177a8b0529.jpg",
+      "category": "laptop"
+    },
+    {
+      "id": "2e4a",
+      "title": "DELL XPS 15 7590 i7-9750H|16GB|512SSD|GTX 1650|Win 10 Pro",
+      "price": 3525000,
+      "stock": 18,
+      "img": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2021/12/28/2c43a3ea-2cb5-4118-b266-179092ebf673.jpg.webp?ect=4g",
+      "description": "DELL XPS 15 7590 :  -i7-9750H -15.6\" 4K UHD Touch -16GB DDR4 -512GB SSD -nVidia GTX1650 4GB -WF + BT ,Backlit Keyboard,Finger Print -Windows 10 Pro -1Yr Onsite Service (1/1/1) -COLOR : Silver",
+      "category": "Laptop"
+    },
+    {
+      "id": "3fd1",
+      "title": "Apple iPhone 7 32GB ",
+      "price": 1600000,
+      "stock": 19,
+      "img": "https://images-cdn.ubuy.co.id/6536aa26e714de6ed2510483-apple-iphone-7-32gb-t-mobile-unlocked.jpg",
+      "description": "barang baru",
+      "category": "Smartphone"
     }
   ]
 }
