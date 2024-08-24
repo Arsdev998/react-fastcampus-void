@@ -1,5 +1,6 @@
 import AdminLayout from "@/components/layout/AdminLayout";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
@@ -16,7 +17,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { axiosIstance } from "@/lib/axios";
-import { ChevronLeft, ChevronRight, Edit, Ellipsis } from "lucide-react";
+import { ChevronLeft, ChevronRight, Edit, Ellipsis, Trash } from "lucide-react";
 import { useEffect, useState } from "react";
 import { IoAdd } from "react-icons/io5";
 import { Link, useParams, useSearchParams } from "react-router-dom";
@@ -27,6 +28,7 @@ const ProductManagementPage = () => {
   const [hashNextPage, setHashNextPage] = useState(true);
   const [searchParam, setSearchparams] = useSearchParams();
   const [productName, setProductName] = useState("");
+  const [selectedProductIds, setSelectesProductIds] = useState([]);
 
   const nextPage = () => {
     searchParam.set("page", Number(searchParam.get("page")) + 1);
@@ -60,6 +62,28 @@ const ProductManagementPage = () => {
       setSearchparams(searchParam);
     } else {
       searchParam.delete("search");
+    }
+  };
+
+  const handleDeleteProduct = async (productId) => {
+    const confirmDelete = confirm(
+      "Are you sure you want to delete this product?"
+    );
+    if (!confirmDelete) return;
+    try {
+      await axiosIstance.delete(`/products/${productId}`);
+      alert("Product has been deleted");
+      fetchProduct();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleOnCheckedProduct = (productId, checked) => {
+    if (checked) {
+      const prevSelectedProductIds = [...selectedProductIds];
+      prevSelectedProductIds.push(productId);
+      setSelectesProductIds(prevSelectedProductIds);
     }
   };
   useEffect(() => {
@@ -104,6 +128,7 @@ const ProductManagementPage = () => {
         <Table className="p-4 border rounded-md">
           <TableHeader>
             <TableRow>
+              <TableHead></TableHead>
               <TableHead>ID</TableHead>
               <TableHead>Peoduct Name</TableHead>
               <TableHead>Price</TableHead>
@@ -115,18 +140,33 @@ const ProductManagementPage = () => {
             {productsData.data?.map((product) => {
               return (
                 <TableRow key={product.id}>
+                  <TableCell>
+                    <Checkbox
+                      checked={selectedProductIds.includes(product.id)}
+                      onCheckedChange={(checked) =>
+                        handleOnCheckedProduct(product.id, checked)
+                      }
+                    />
+                  </TableCell>
                   <TableCell>{product.id}</TableCell>
                   <TableCell>{product.title}</TableCell>
                   <TableCell>
                     Rp.{product.price?.toLocaleString("id-ID")}
                   </TableCell>
                   <TableCell>{product.stock}</TableCell>
-                  <TableCell>
+                  <TableCell className="flex gap-4">
                     <Link to={"/admin/products/edit/" + product.id}>
                       <Button variant="ghost" size="icon">
                         <Edit className="h-6 w-6" />
                       </Button>
                     </Link>
+                    <Button
+                      variant="destructive"
+                      size="icon"
+                      onClick={() => handleDeleteProduct(product.id)}
+                    >
+                      <Trash className="w-5 h-5" />
+                    </Button>
                   </TableCell>
                 </TableRow>
               );

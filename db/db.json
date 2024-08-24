@@ -28,15 +28,6 @@
       "category": "Smartphone"
     },
     {
-      "id": "23hj",
-      "title": "APPLE MACBOOK AIR",
-      "price": 18000000,
-      "stock": 8,
-      "img": "https://cdnpro.eraspace.com/media/catalog/product/m/a/macbook_air_m2_space_gray_1.jpg",
-      "description": "Apple MacBook Air with M2 chip, 13.3-inch Retina display, and up to 18 hours of battery life.",
-      "category": "Laptop"
-    },
-    {
       "id": "23nd",
       "title": "Samsung Galaxy S23",
       "price": 12000000,
@@ -98,42 +89,6 @@
       "img": "https://cdnpro.eraspace.com/media/catalog/product/a/p/apple_watch_series_8_starlight_1.jpg",
       "description": "Apple Watch Series 8 with ECG, Blood Oxygen sensor, and always-on Retina display.",
       "category": "Smartwatch"
-    },
-    {
-      "id": "weou2",
-      "title": "PlayStation 5",
-      "price": 9000000,
-      "stock": 30,
-      "img": "https://cdnpro.eraspace.com/media/catalog/product/p/s/ps5_disc_1.jpg",
-      "description": "PlayStation 5 with ultra-high-speed SSD, 4K gaming, and immersive haptic feedback.",
-      "category": "Gaming Console"
-    },
-    {
-      "id": "23bs",
-      "title": "Nintendo Switch",
-      "price": 4500000,
-      "stock": 18,
-      "img": "https://cdnpro.eraspace.com/media/catalog/product/n/i/nintendo_switch_oled_white_1.jpg",
-      "description": "Nintendo Switch with 7-inch OLED display, versatile gaming modes, and long battery life.",
-      "category": "Gaming Console"
-    },
-    {
-      "id": "sd98",
-      "title": "Apple iPad Pro 11",
-      "price": 16000000,
-      "stock": 8,
-      "img": "https://cdnpro.eraspace.com/media/catalog/product/a/p/apple_ipad_pro_11_1tb_wi-fi_space_gray_1.jpg",
-      "description": "Apple iPad Pro 11 with M2 chip, Liquid Retina display, and support for Apple Pencil (2nd generation).",
-      "category": "Tablet"
-    },
-    {
-      "id": "18dj",
-      "title": "Bose QuietComfort 45",
-      "price": 3800000,
-      "stock": 20,
-      "img": "https://cdnpro.eraspace.com/media/catalog/product/b/o/bose_qc45_black_1.jpg",
-      "description": "Bose QuietComfort 45 Wireless Noise Cancelling Headphones with 24 hours of battery life.",
-      "category": "Headphones"
     },
     {
       "id": "1f97",
