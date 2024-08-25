@@ -47,7 +47,6 @@ const ProductManagementPage = () => {
           title: searchParam.get("search"),
         },
       });
-      console.log(response.data);
       setProductsData(response.data);
       setHashNextPage(Boolean(response.data.next));
       setLastPage(Number(response.data.last));
@@ -65,15 +64,21 @@ const ProductManagementPage = () => {
     }
   };
 
-  const handleDeleteProduct = async (productId) => {
+  const handleDeleteProduct = async () => {
     const confirmDelete = confirm(
-      "Are you sure you want to delete this product?"
+      `Are you sure you want to delete ${selectedProductIds.length} products?`
     );
     if (!confirmDelete) return;
+    const deletePrimises = selectedProductIds.map((productId) => {
+      return axiosIstance.delete("/products/" + productId);
+    });
+
     try {
-      await axiosIstance.delete(`/products/${productId}`);
-      alert("Product has been deleted");
-      fetchProduct();
+      await Promise.all(deletePrimises);
+      alert(`Succesfully deleted ${selectedProductIds.length} products`);
+      searchParam.set("page", Number(1));
+      setSearchparams(searchParam);
+      setSelectesProductIds([]);
     } catch (error) {
       console.log(error);
     }
@@ -83,6 +88,13 @@ const ProductManagementPage = () => {
     if (checked) {
       const prevSelectedProductIds = [...selectedProductIds];
       prevSelectedProductIds.push(productId);
+      setSelectesProductIds(prevSelectedProductIds);
+    } else {
+      const productIdIndex = selectedProductIds.findIndex((id) => {
+        return id === productId;
+      });
+      const prevSelectedProductIds = [...selectedProductIds];
+      prevSelectedProductIds.splice(productIdIndex, 1);
       setSelectesProductIds(prevSelectedProductIds);
     }
   };
@@ -105,12 +117,24 @@ const ProductManagementPage = () => {
         title="Products Management"
         description="Managing our product"
         rightButton={
-          <Link to="/admin/products/create">
-            <Button>
-              <IoAdd className="h-6 w-6 mr-2" />
-              Add Product
-            </Button>
-          </Link>
+          <div className="flex gap-2">
+            {selectedProductIds.length >= 1 ? (
+              <Button
+                variant="destructive"
+                className="w-full"
+                onClick={handleDeleteProduct}
+              >
+                Delete {selectedProductIds.length} product{" "}
+                <Trash className="w-5 h-5" />
+              </Button>
+            ) : null}
+            <Link to="/admin/products/create">
+              <Button>
+                <IoAdd className="h-6 w-6 mr-2" />
+                Add Product
+              </Button>
+            </Link>
+          </div>
         }
       >
         <div className="">
@@ -160,13 +184,6 @@ const ProductManagementPage = () => {
                         <Edit className="h-6 w-6" />
                       </Button>
                     </Link>
-                    <Button
-                      variant="destructive"
-                      size="icon"
-                      onClick={() => handleDeleteProduct(product.id)}
-                    >
-                      <Trash className="w-5 h-5" />
-                    </Button>
                   </TableCell>
                 </TableRow>
               );

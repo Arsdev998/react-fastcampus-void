@@ -46,15 +46,6 @@
       "category": "Laptop"
     },
     {
-      "id": "23hj",
-      "title": "Sony WH-1000XM4",
-      "price": 4000000,
-      "stock": 25,
-      "img": "https://cdnpro.eraspace.com/media/catalog/product/s/o/sony_wh_1000xm4_silver_1.jpg",
-      "description": "Sony WH-1000XM4 Wireless Noise-Canceling Over-Ear Headphones with 30 hours battery life.",
-      "category": "Headphones"
-    },
-    {
       "id": "23bd",
       "title": "Google Pixel 7 Pro",
       "price": 14000000,
@@ -62,33 +53,6 @@
       "img": "https://cdnpro.eraspace.com/media/catalog/product/g/o/google_pixel_7_pro_obsidian_black_1.jpg",
       "description": "Google Pixel 7 Pro with Google Tensor chip, 6.7-inch QHD+ OLED display, and triple-camera system.",
       "category": "Smartphone"
-    },
-    {
-      "id": "k231",
-      "title": "Asus ROG Phone 6",
-      "price": 17000000,
-      "stock": 10,
-      "img": "https://cdnpro.eraspace.com/media/catalog/product/a/s/asus_rog_phone_6_512gb_phantom_black_1.jpg",
-      "description": "Asus ROG Phone 6 with Snapdragon 8+ Gen 1, 6.78-inch AMOLED display, and 6000mAh battery.",
-      "category": "Smartphone"
-    },
-    {
-      "id": "23jh",
-      "title": "Microsoft Surface Pro 9",
-      "price": 25000000,
-      "stock": 7,
-      "img": "https://cdnpro.eraspace.com/media/catalog/product/m/i/microsoft_surface_pro_9_5g_graphite_1.jpg",
-      "description": "Microsoft Surface Pro 9 with Intel Core i7, 13-inch PixelSense display, and LTE connectivity.",
-      "category": "Laptop"
-    },
-    {
-      "id": "23hjd",
-      "title": "Apple Watch Series 8",
-      "price": 8000000,
-      "stock": 20,
-      "img": "https://cdnpro.eraspace.com/media/catalog/product/a/p/apple_watch_series_8_starlight_1.jpg",
-      "description": "Apple Watch Series 8 with ECG, Blood Oxygen sensor, and always-on Retina display.",
-      "category": "Smartwatch"
     },
     {
       "id": "1f97",
@@ -116,15 +80,6 @@
       "img": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2021/12/28/2c43a3ea-2cb5-4118-b266-179092ebf673.jpg.webp?ect=4g",
       "description": "DELL XPS 15 7590 :  -i7-9750H -15.6\" 4K UHD Touch -16GB DDR4 -512GB SSD -nVidia GTX1650 4GB -WF + BT ,Backlit Keyboard,Finger Print -Windows 10 Pro -1Yr Onsite Service (1/1/1) -COLOR : Silver",
       "category": "Laptop"
-    },
-    {
-      "id": "3fd1",
-      "title": "Apple iPhone 7 32GB ",
-      "price": 1600000,
-      "stock": 19,
-      "img": "https://images-cdn.ubuy.co.id/6536aa26e714de6ed2510483-apple-iphone-7-32gb-t-mobile-unlocked.jpg",
-      "description": "barang baru",
-      "category": "Smartphone"
     }
   ]
 }
