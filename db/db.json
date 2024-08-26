@@ -81,5 +81,22 @@
       "description": "DELL XPS 15 7590 :  -i7-9750H -15.6\" 4K UHD Touch -16GB DDR4 -512GB SSD -nVidia GTX1650 4GB -WF + BT ,Backlit Keyboard,Finger Print -Windows 10 Pro -1Yr Onsite Service (1/1/1) -COLOR : Silver",
       "category": "Laptop"
     }
+  ],
+  "users": [
+    {
+      "id": "a358",
+      "username": "asoy",
+      "password": "12345678"
+    },
+    {
+      "id": "2c45",
+      "username": "rafe",
+      "password": "12345678"
+    },
+    {
+      "id": "b680",
+      "username": "asoyyyy",
+      "password": "12345678"
+    }
   ]
 }
